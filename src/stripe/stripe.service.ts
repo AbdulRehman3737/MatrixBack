@@ -13,7 +13,7 @@ export class StripeService {
 
   async createCheckoutSession(amount: number, email?: string) {
     // Validate amount
-    if (!Number.isFinite(amount) || amount < 50 || amount > 5000) {
+    if (!Number.isFinite(amount) || amount < 20 || amount > 5000) {
       throw new BadRequestException('Invalid amount');
     }
 
